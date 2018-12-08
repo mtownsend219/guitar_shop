@@ -28,6 +28,16 @@
                 <td class="right">
                     <?php echo sprintf('$%.2f', $item['line_price']); ?>
                 </td>
+                <td class="right">
+                    <input type="submit" name="remove" value="Remove" >
+                <?php //MT Changed
+                    if(isset($_POST['remove'])) { 
+                        cart_remove_item($product_id) ;
+                        header("Refresh: 0");
+                        unset($_POST['remove']) ;
+                    }
+                ?>
+                </td>
             </tr>
             <?php endforeach; ?>
             <tr id="cart_footer" >
