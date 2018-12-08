@@ -9,6 +9,7 @@ require_once('model/product_db.php');
 
 require_once('model/fields.php');
 require_once('model/validate.php');
+require_once('model/admin_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
@@ -205,6 +206,9 @@ switch ($action) {
         // Check email and password in database
         if (is_valid_customer_login($email, $password)) {
             $_SESSION['user'] = get_customer_by_email($email);
+        } else if (is_valid_admin_login($email, $password)) {
+            $_SESSION['admin'] = get_admin_by_email($email);
+            redirect('../admin');
         } else {
             $password_message = 'Login failed. Invalid email or password.';
             include 'account/account_login_register.php';
