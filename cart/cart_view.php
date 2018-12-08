@@ -4,7 +4,7 @@
     <?php if (cart_product_count() == 0) : ?>
         <p>There are no products in your cart.</p>
     <?php else: ?>
-        <p>To remove an item from your cart, change its quantity to 0.</p>
+        <p>To remove an item from your cart, click the remove button next to the item.</p>
         <form action="." method="post">
             <input type="hidden" name="action" value="update">
             <table id="cart">
@@ -27,6 +27,16 @@
                 </td>
                 <td class="right">
                     <?php echo sprintf('$%.2f', $item['line_price']); ?>
+                </td>
+                <td class="right">
+                    <input type="submit" name="remove" value="Remove" >
+                <?php 
+                    if(isset($_POST['remove'])) { 
+                        cart_remove_item($product_id) ;
+                        header("Refresh: 0");
+                        unset($_POST['remove']) ;
+                    }
+                ?>
                 </td>
             </tr>
             <?php endforeach; ?>
