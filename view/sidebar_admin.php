@@ -1,5 +1,5 @@
 <aside>
-    <h2>Links</h2>
+    <!-- <h2>Links</h2>
     <ul>
         <li>
         <?php
@@ -20,7 +20,7 @@
         <li>
             <a href="<?php echo $app_path; ?>admin">Admin</a>
         </li>
-    </ul>
+    </ul> -->
     
     <?php if (isset($categories)) : ?>
     <!-- display links for all categories -->

@@ -13,7 +13,18 @@ body {
 header {
     border-bottom: 2px solid black;
     padding: .5em 0;
+    display: flex;
 }
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    margin-left: 10px;
+    padding-top: 18px;
+}
+
 header h1 {
     color: black;
 }
