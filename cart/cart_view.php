@@ -30,7 +30,7 @@
                 </td>
                 <td class="right">
                     <input type="submit" name="remove" value="Remove" >
-                <?php //MT Changed
+                <?php 
                     if(isset($_POST['remove'])) { 
                         cart_remove_item($product_id) ;
                         header("Refresh: 0");
