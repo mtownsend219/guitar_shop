@@ -1,5 +1,5 @@
 <aside>
-    <h2>Links</h2>
+    <!-- <h2>Links</h2>
     <ul>
         <li>
             <a href="<?php echo $app_path . 'cart'; ?>">View Cart</a>
@@ -19,7 +19,7 @@
         <li>
             <a href="<?php echo $app_path; ?>">Home</a>
         </li>
-    </ul>
+    </ul> -->
         
     <h2>Categories</h2>
     <ul>

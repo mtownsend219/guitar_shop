@@ -390,6 +390,7 @@ switch ($action) {
         break;
     case 'logout':
         unset($_SESSION['user']);
+        unset($_SESSION['admin']);
         redirect('..');
         break;
     default:
