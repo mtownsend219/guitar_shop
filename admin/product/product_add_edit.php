@@ -39,28 +39,28 @@
 
         <label>Code:</label>
         <input type="text" name="code"
-               value="<?php echo htmlspecialchars($product['productCode']); ?>">
+               value="<?php echo htmlspecialchars($product['productCode']); ?>" required>
         <br>
 
         <label>Name:</label>
         <input type="text" name="name" 
                value="<?php echo htmlspecialchars($product['productName']); ?>" 
-               size="50">
+               size="50" required>
         <br>
 
         <label>List Price:</label>
         <input type="text" name="price" 
-               value="<?php echo $product['listPrice']; ?>">
+               value="<?php echo $product['listPrice']; ?>" required>
         <br>
 
         <label>Discount Percent:</label>
         <input type="text" name="discount_percent" 
-               value="<?php echo $product['discountPercent']; ?>">
+               value="<?php echo $product['discountPercent']; ?>" required>
         <br>
 
         <label>Description:</label>
         <textarea name="description" rows="10"
-                  cols="50"><?php echo $product['description']; ?></textarea>
+                  cols="50" required><?php echo $product['description']; ?></textarea>
         <br>
 
         <label>&nbsp;</label>
