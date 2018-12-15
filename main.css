@@ -11,9 +11,18 @@ body {
     border: 1px solid black;
 }
 header {
-    border-bottom: 2px solid black;
-    padding: .5em 0;
-    display: flex;
+    text-shadow:1px 6px 3px rgba(255,232,84,1);
+    font-weight:bold;
+    color:#E32061;
+    border: 5px solid #b5a759;
+    letter-spacing:1pt;
+    word-spacing:2pt;font-size:29px;
+    text-align:left;
+    font-family:comic sans, comic sans ms, cursive, verdana, arial, sans-serif;
+    line-height:1;
+    margin:49px;
+    padding:10px;
+    width:500px;
 }
 
 header ul {
